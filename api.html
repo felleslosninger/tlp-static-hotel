@@ -186,7 +186,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie"
 
 <p>Presentasjon av datasett foregår med pagination, og det vil vises maks 100 poster om gangen ved utlisting. For å vise neste side benytter man parameteret <em>page</em> hvor første side er <em>page=1</em> (1-indeksert). Eksempel:</p>
 
-<p><a href="api/json/brreg/enhetsregisteret@page=8">http://hotell.difi.no/api/json/brreg/enhetsregisteret?page=8</a></p>
+<p><a href="api/json/brreg/enhetsregisteret?page=8">http://hotell.difi.no/api/json/brreg/enhetsregisteret?page=8</a></p>
 
 <p>Ved uthenting av data hvor pagination benyttes finnes det metadata om dette i HTTP-header. Følgende parametere kan hentes:</p>
 
@@ -219,7 +219,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie"
 
 <p>Det er to måter å hente ut spesifikke data på. Den første måten er å søke. Du kan for eksempel søke på fylker som har ordet "Agder" i seg, og få resultatet ut i json, på denne måten:</p>
 
-<p><a href="api/json/difi/geo/fylke@query=agder">http://hotell.difi.no/api/json/difi/geo/fylke?query=agder</a></p>
+<p><a href="api/json/difi/geo/fylke?query=agder">http://hotell.difi.no/api/json/difi/geo/fylke?query=agder</a></p>
 
 <p>Når man gjør et slikt søk søker man i alle felt som er satt som søkbare (at et felt er søkbart betyr at det i feltdefinisjonen må stå at searchable = True). </p>
 
@@ -229,7 +229,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie"
 
 <p>Hvis jeg ønsker å hente ned alle kommuner i Sogn og Fjordane benyttes følgende adresse:</p>
 
-<p><a href="api/json/difi/geo/kommune@fylke=14">http://hotell.difi.no/api/json/difi/geo/kommune?fylke=14</a></p>
+<p><a href="api/json/difi/geo/kommune?fylke=14">http://hotell.difi.no/api/json/difi/geo/kommune?fylke=14</a></p>
 
 <p>Merk at søk gir treff i hele ord. For filtrering må "verdi" gi nøyaktig treff på hele innholdet i feltet.</p>
 
@@ -241,7 +241,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie"
 
 <p>Bruk parameteret "?download" på slutten av URL-en for å få CSV-en i UTF8 med BOM i stedet for UTF8 uten BOM.</p>
 
-<p><a href="download/difi/geo/kommune@download">http://hotell.difi.no/download/difi/geo/kommune?download</a></p>
+<p><a href="download/difi/geo/kommune?download">http://hotell.difi.no/download/difi/geo/kommune?download</a></p>
 
 <h3>CSV-format</h3>
 
