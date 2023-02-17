@@ -1,0 +1,57 @@
+.js-only {
+	display: none;
+}
+
+#datasets {
+  text-align: center;
+  padding: 10pt 0;
+}
+#datasets label {
+  display: inline;
+}
+
+#dataset {
+  width: 50%;
+}
+
+#data-panel {
+  margin: 10pt 0 0 0;
+  padding: 10pt 0;
+  border: 0;
+}
+
+#data {
+	border-top: 1px solid #ddd;
+}
+#data table {
+  font-size: 0.8em;
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+#data th {
+  text-align: left;
+}
+#data tbody tr:nth-child(odd) {
+	background-color:#eee;
+}
+#data th, #data td {
+	padding: 2pt;
+}
+
+
+#data-filter {
+	background-color: #eaeaea;
+  padding: 10pt 0 10pt 200pt;
+}
+#data-filter  label{
+  float: left;
+  margin-left: -190pt;
+}
+#data-filter input {
+  display: block;
+  margin-bottom: 10pt;
+}
+
+footer.row {
+	min-height: inherit;
+}

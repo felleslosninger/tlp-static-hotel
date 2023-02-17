@@ -1,0 +1,354 @@
+<!doctype html>
+<!--[if lte IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="nb"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="nb"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="nb"> <!--<![endif]-->
+<head>
+  <title>API | Digitaliseringsdirektoratet - Difi</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="themes/contrib/difi2/favicon.ico?rbo0zy" type="image/vnd.microsoft.icon" />
+<meta name="description" content="Rate-limiting Grunnet høy trafikk har vi innført rate-limiting. Grensen er på 10 forespørsler pr. sekund pr. IP-adresse. Denne grensen kan bli justert. Dersom grensen blir nådd, vil videre forespørsler gi HTTP-feilkode 429 tilbake, og du må prøve på nytt. Les mer om rate-limiting i driftsmelding da dette ble innført 25.03.2022 Bruk av datasett Gjennom API får man 100 poster" />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="api.html" />
+<link rel="shortlink" href="node/1.html" />
+  <!--[if IE]> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <![endif]-->
+  
+  <style type="text/css" media="all">
+@import url("modules/system/system.base.css?rbo0zy.css");
+@import url("modules/system/system.messages.css?rbo0zy.css");
+@import url("modules/system/system.theme.css?rbo0zy.css");
+</style>
+<style type="text/css" media="all">
+@import url("modules/field/theme/field.css?rbo0zy.css");
+@import url("modules/node/node.css?rbo0zy.css");
+@import url("modules/user/user.css?rbo0zy.css");
+@import url("modules/contrib/views/css/views.css?rbo0zy.css");
+</style>
+<style type="text/css" media="all">
+@import url("modules/contrib/ctools/css/ctools.css?rbo0zy.css");
+</style>
+<style type="text/css" media="all">
+@import url("themes/contrib/difi2/css/flexslider.css?rbo0zy.css");
+@import url("themes/contrib/difi2/css/boilerplate1.css?rbo0zy.css");
+@import url("themes/contrib/difi2/css/style_felleselementer.css?rbo0zy.css");
+@import url("themes/contrib/difi2/css/boilerplate2.css?rbo0zy.css");
+@import url("themes/contrib/difi2/css/1140.css?rbo0zy.css");
+@import url("themes/contrib/difi2/css/mainmenu.css?rbo0zy.css");
+@import url("themes/contrib/difi2/css/difi3-override.css?rbo0zy.css");
+@import url("profiles/datahotel/themes/difi2_datahotel/css/style.css?rbo0zy.css");
+</style>
+<style type="text/css" media="print">
+@import url("themes/contrib/difi2/css/print.css?rbo0zy.css");
+</style>
+  
+  <link rel="stylesheet" href="themes/contrib/difi2/css/style_felleselementer_purple.css">  
+  <link type="text/css" rel="stylesheet" href="themes/contrib/difi2/css/fonts.css" media="all" />
+
+  <!--[if lte IE 10]>  <link rel="stylesheet" href="/themes/contrib/difi2/css/ie.css"> <![endif]-->
+  <!--[if IE 7]>  <link rel="stylesheet" href="/themes/contrib/difi2/css/ie7.css"> <![endif]-->
+
+  <script src="themes/contrib/difi2/js/libs/modernizr-2.5.3.min.js"></script>
+  <script type="text/javascript">
+    // Test for small screen (defined in 1140.css as 767px) - modernizer will add class 'smallscreen' or 'no-smallscreen'
+    Modernizr.addTest('smallscreen', Modernizr.mq('handheld, only screen and (max-width: 767px)'));
+  </script>
+  <script type="text/javascript" src="misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="misc/jquery-extend-3.4.0.js?v=1.4.4"></script>
+<script type="text/javascript" src="misc/jquery-html-prefilter-3.5.0-backport.js?v=1.4.4"></script>
+<script type="text/javascript" src="misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="misc/drupal.js?rbo0zy"></script>
+<script type="text/javascript" src="sites/datahotel/files/languages/nb_MUX93-iue1miGoifgQ_drkJvh13E_CRfIFn3EvHkZLI.js?rbo0zy"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var uri_datahotel_api = "//hotell.difi.no/api";
+//--><!]]>
+</script>
+<script type="text/javascript" src="modules/contrib/google_analytics/googleanalytics.js?rbo0zy"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-12685001-11", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="themes/contrib/difi2/js/jquery-1.10.2.min.js?rbo0zy"></script>
+<script type="text/javascript" src="themes/contrib/difi2/js/mainmenu.js?rbo0zy"></script>
+<script type="text/javascript" src="themes/contrib/difi2/js/hoverintent.js?rbo0zy"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"difi2_datanorge","theme_token":"fNvdySPPjVygcy4jY_8bnublFxiO8CnJMVyPc_prGeY","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"public:\/\/languages\/nb_MUX93-iue1miGoifgQ_drkJvh13E_CRfIFn3EvHkZLI.js":1,"0":1,"modules\/contrib\/google_analytics\/googleanalytics.js":1,"1":1,"themes\/contrib\/difi2\/js\/jquery-1.10.2.min.js":1,"themes\/contrib\/difi2\/js\/mainmenu.js":1,"themes\/contrib\/difi2\/js\/hoverintent.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"modules\/contrib\/views\/css\/views.css":1,"modules\/contrib\/ctools\/css\/ctools.css":1,"themes\/contrib\/difi2\/css\/flexslider.css":1,"themes\/contrib\/difi2\/css\/boilerplate1.css":1,"themes\/contrib\/difi2\/css\/style_felleselementer.css":1,"themes\/contrib\/difi2\/css\/boilerplate2.css":1,"themes\/contrib\/difi2\/css\/1140.css":1,"themes\/contrib\/difi2\/css\/mainmenu.css":1,"themes\/contrib\/difi2\/css\/difi3-override.css":1,"profiles\/datahotel\/themes\/difi2_datahotel\/css\/style.css":1,"themes\/contrib\/difi2\/css\/print.css":1}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1 node-type-page" >
+    <div class="hidden">
+  <a href="api.html#content" title="Hopp til innhold">Hopp til innhold</a>
+</div>
+
+<div class="container header">
+	<div class="row whitespace"></div>
+	<header class="row">
+		<div class="group">
+			<div class="logo">
+				<a id="logo" href="https://www.difi.no" title="Hjem" style="background-image: url(themes/contrib/difi2/img/difi-logo-subportal.png);"><h1 class="hide">Difi - Direktoratet for forvaltning og IKT</h1></a>
+			</div>
+						<div class="sub-portal">
+									<a href="index.html" title="Hjem">Digitaliseringsdirektoratet</a>
+													<p>Datahotell</p>
+							</div>
+					</div>
+		<div id="tools">
+		<div class="tools">
+
+		  
+      
+      <div>
+        <a id="tools_size" href="api.html#"><img src="themes/contrib/difi2/img/fontsize_btn2_purple.png" alt="Tekststørrelse">
+        <span class="hide">A+ A a</span>
+        <span class="box">
+          <span class="text">For å endre tekststørrelsen, hold Ctrl-tasten nede og trykk på + for å forstørre eller - for å forminske.</span>
+        </span><!-- /.box -->
+        </a>
+      </div>
+
+		</div><!-- /.tools -->
+
+		<div class="minimenu">
+		<div class="item-list"><ul><li class="first"><a href="http://data.norge.no/">data.norge.no</a></li><li class="last"><a href="https://github.com/difi/datahotel">Github</a></li></ul></div>		</div><!-- /.minimenu -->
+		</div>
+	</header>
+</div><!-- /.container header -->
+
+<div class="container menu" >
+    <div class="row whitespace" ></div>
+    <div class="row bgLayoutFix" >
+        <div class="dummy"></div>
+    </div>
+</div><!-- /.container menu -->
+
+<div class="container main">
+
+	<div class="row submenues">
+		<div class="twelvecol">
+			<div class="toggler nomenu">
+				<a class="menuBtn">Meny</a>
+			</div>
+
+				<nav class="menuWrapper ">
+					<div class="menuBg"></div>
+											<div class="item-list"><ul class="level0"><li class="menuitem no-submenu first"><a href="index.html">Hjem</a></li><li class="menuitem active no-submenu"><a href="api.html" class="active">API</a></li><li class="menuitem no-submenu last"><a href="driftsmeldinger.html">Driftsmeldinger</a></li></ul></div>									</nav>
+		</div>
+	</div>
+
+            <div class="row" id="breadcrumb"><a href="index.html">Hjem</a> » API</div>
+      
+	
+  
+	<div class="row">
+	  		<!-- Left column -->
+		<div class="threecol sidebar">
+			<section class="chaptermenu felles">
+							</section><!-- /.chaptermenu -->
+		</div><!-- /.threecol -->
+		
+		<!-- Center column -->
+
+		<div class="sixcol main-content">
+		  <a name="content"></a>
+			<section class="chaptertext purple contextual-links-region">
+			          <h1>API</h1>                				  <div class="region region-content">
+    <div id="node-1" class="node node-page node-full">
+
+      
+  
+  <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even"><h3>Rate-limiting</h3>
+
+<p>Grunnet høy trafikk har vi innført rate-limiting. Grensen er på 10 forespørsler pr. sekund pr. IP-adresse. Denne grensen kan bli justert.</p>
+
+<p>Dersom grensen blir nådd, vil videre forespørsler gi HTTP-feilkode 429 tilbake, og du må prøve på nytt.</p>
+
+<p>Les mer om rate-limiting i <a href="https://datalandsbyen.norge.no/topic/179/datahotellet-ustabilt-mars-2022">driftsmelding da dette ble innført 25.03.2022</a></p>
+
+<h3>Bruk av datasett</h3>
+
+<p>Gjennom API får man 100 poster per side (pagination), og man må spørre flere ganger for å hente mer enn de 100 første postene. Informasjon om nedlasting av komplett datasett finner man lenger nede.</p>
+
+<p>Dersom du eksempelvis ønsker å benytte Difis liste over fylker, i json-format, kan du gjøre det fra denne adressen:</p>
+
+<p><a href="https://hotell.difi.no/api/json/difi/geo/fylke">http://hotell.difi.no/api/json/difi/geo/fylke</a></p>
+
+<p>Dersom du ønsker å benytte samme listen i csv-format, kan du gjøre det fra denne adressen:</p>
+
+<p><a href="api/csv/difi/geo/fylke">http://hotell.difi.no/api/csv/difi/geo/fylke</a></p>
+
+<h3>Pagination</h3>
+
+<p>Presentasjon av datasett foregår med pagination, og det vil vises maks 100 poster om gangen ved utlisting. For å vise neste side benytter man parameteret <em>page</em> hvor første side er <em>page=1</em> (1-indeksert). Eksempel:</p>
+
+<p><a href="api/json/brreg/enhetsregisteret@page=8">http://hotell.difi.no/api/json/brreg/enhetsregisteret?page=8</a></p>
+
+<p>Ved uthenting av data hvor pagination benyttes finnes det metadata om dette i HTTP-header. Følgende parametere kan hentes:</p>
+
+<ul>
+	<li>X-Datahotel-Page</li>
+	<li>X-Datahotel-Total-Pages</li>
+	<li>X-Datahotel-Total-Posts</li>
+</ul>
+
+<p>NB! Dersom du skal laste ned komplett datasett, ikke bruk paginering for å hente ned hele datasettet dersom det er et stort datasett, da dette gir unødig høy belastning på datahotellet. Da bør du heller laste ned hele (se avsnitt "Komplett datasett") datasettet.</p>
+
+
+<h3>ETag</h3>
+
+<p>Alle oppslag som henter data (ikke oversikt over organisasjoner, grupper og datasett) har støtte for ETag. Som ETag bruker datahotellet unix timestamp, enten i hele sekund (10 siffer) eller i millisekund (13 siffer). Unix timestamp i ETag reflekterer når tid datasettet sist vart endret på datahotellet.</p>
+
+
+<h3>Eksempel på nedlasting av feltdefinisjoner</h3>
+
+<p>Alle felt i datahotellet er definert minst med navn, beskrivelse, type (for eksempel om det er et navn, en kategorisering, et fylkesnummer, et kommunenummer eller en måleenhet), om de er søkbare, grupperbare og om de kan gjøres oppslag i. Feltdefinisjonene for datasettet du er interessert i kan lastes ned i JSON:</p>
+
+<p><a href="api/json/difi/geo/fylke/fields">http://hotell.difi.no/api/json/difi/geo/fylke/fields</a></p>
+
+<!-- <p>Eller i xml:</p>
+
+<p><a href="/api/xml/difi/geo/fylke/fields">http://hotell.difi.no/api/xml/difi/geo/fylke/fields</a></p>-->
+
+
+<h3>Eksempel på oppslag i API-et</h3>
+
+<p>Det er to måter å hente ut spesifikke data på. Den første måten er å søke. Du kan for eksempel søke på fylker som har ordet "Agder" i seg, og få resultatet ut i json, på denne måten:</p>
+
+<p><a href="api/json/difi/geo/fylke@query=agder">http://hotell.difi.no/api/json/difi/geo/fylke?query=agder</a></p>
+
+<p>Når man gjør et slikt søk søker man i alle felt som er satt som søkbare (at et felt er søkbart betyr at det i feltdefinisjonen må stå at searchable = True). </p>
+
+<p>Den andre måten å hente ut spesifikke data på er å gjøre oppslag. Man kan kun gjøre oppslag i felt der groupable = True. Det er ingen grupperbare felt i listen over fylker. Det er det derimot i datasettet over kommuner. Kallet settes opp på denne måten:</p>
+
+<p>url-til-datasett?feltnavn=verdi</p>
+
+<p>Hvis jeg ønsker å hente ned alle kommuner i Sogn og Fjordane benyttes følgende adresse:</p>
+
+<p><a href="api/json/difi/geo/kommune@fylke=14">http://hotell.difi.no/api/json/difi/geo/kommune?fylke=14</a></p>
+
+<p>Merk at søk gir treff i hele ord. For filtrering må "verdi" gi nøyaktig treff på hele innholdet i feltet.</p>
+
+<h3>Komplett datasett</h3>
+
+<p>Det er mulig å laste ned komplett datasett som CSV ved å benytte nedlastingslenke. Eksempel på nedlasting av kommuner:</p>
+
+<p><a href="download/difi/geo/kommune">http://hotell.difi.no/download/difi/geo/kommune</a></p>
+
+<p>Bruk parameteret "?download" på slutten av URL-en for å få CSV-en i UTF8 med BOM i stedet for UTF8 uten BOM.</p>
+
+<p><a href="download/difi/geo/kommune@download">http://hotell.difi.no/download/difi/geo/kommune?download</a></p>
+
+<h3>CSV-format</h3>
+
+<p>Datahotellet bruker semikolon (';') som skilletegn mellom felt/kolonner.</p>
+
+<p>Felt er som oftest omsluttet av hermetegn ('"').</p>
+
+<p>Escape-tegn er backslash ('\'). Det er noen datasett som bruker et ekstra hermetegn som escape-tegn. Dette gjelder ikke noen av de mest brukte datasettene (brreg/..., difi/elma/...).</p>
+
+<h3>Spesialtegn</h3>
+
+<p>I den nåverende versjonen av datahotellet fungerer ikke parameter (i både søk og oppslag) som har spesialtegn. Eksempel på spesialtegn er punktum, komma, stjerne, ampersand og bindestrek (.,*&-).</p>
+
+<p>Noen brukere melder at de har delvis kommet rundt problemet ved å erstatte spesialtegn med mellomrom i søkestrengen. Dersom du bruker denne løsningen, anbefaler vi at du tester at søket fungerer til ditt formål før du tar det i bruk.</p>
+
+<h3>Rekkefølge på felt</h3>
+
+<p>Datahotellet garanterer ikke felt-rekkefølge, og du bør derfor aldri lage integrasjoner som er avhengig av felt-rekkefølge, for eksempel at du henter ut felt nr. 5. Du bør heller koble mot feltnavn, for eksempel hente ut verdi for felt med navnet "orgnr".</p>
+<p>Ustabil felt-rekkefølge kan oppleves på noen API-endepunkt. Dette skyldes den underliggende teknologien, og er ikke noe vi har planer om å gjøre noe med.</p>
+<p>For noen datasett vil nye felt bli lagt til slik at feltrekkefølgen endrer seg.</p>
+
+<h3>HTTP-statuskoder</h3>
+
+<p>HTTP-statuskoder og hva de betyr i Datahotell-sammenheng</p>
+
+<ul>
+<li>200 (OK) — Vanlig svar ved oppslag i datahotellet, også om du gjør et søk som gir null treff.
+<li>3xx (redirect) — Ved planlagt nedetid for vedlikehold kan du få statuskode i 300-serien med henvisning til nettside med melding om vedlikehold.
+<li>404 (Not found) — Som regel dersom du prøver å slå opp et datasett som ikke finnes. Se driftsmeldinger om du prøver å slå opp et datasett som er avviklet.
+<li>429 — se avsnitt «Rate limiting»
+<li>502 — Nedetid på datahotellet (teknisk sett: lastbalanserer får ikke kontakt med datahotellet)
+</ul>
+
+<h3>IP-adresser</h3>
+
+<p>Dersom du trenger å lage åpninger i din brannmur for trafikk inn til datahotellet, så er dette IP-adressene. Vi anbefaler å åpne mot DNS (f.eks. "lb1.difi.no") i tilfelle IP-adressene forandrer seg.</p>
+
+<table style="width: 450px;">
+<tr>
+<th>DNS</th>
+<th>IPv4</th>
+<th>IPv6</th>
+</tr>
+<tr>
+<td>lb1.difi.no</td>
+<td>79.170.81.231</td>
+<td>2001:67c:2d68:d1f1::1b:1</td>
+</tr>
+<tr>
+<td>lb2.difi.no</td>
+<td>79.170.81.232</td>
+<td>2001:67c:2d68:d1f1::1b:2</td>
+</tr>
+<tr>
+<td>lb3.difi.no</td>
+<td>79.170.81.233</td>
+<td>2001:67c:2d68:d1f1::1b:3</td>
+</tr>
+</table>
+<br/>
+
+<h3>HTTPS</h3>
+<p>Datahotellet har støttet både kryptert (HTTPS) og ukryptert (HTTP) kommunikasjon. Tirsdag 24. mars 2020 kl. 8:30 ble støtte for HTTP skrudd av. Se tidligere Driftsmeldinger.</p>
+<p>Klienter som bruker datahotellet må støtte minst TLS 1.2. Vi pleier å legge oss på <a href="https://wiki.mozilla.org/Security/Server_Side_TLS">Mozilla sine anbefalinger ("Intermediate compability")</a>. Følg med på driftsmeldinger for varsel om endringer.</p>
+
+<h3>Oppetid</h3>
+<p>Driftsavvik for Datahotellet blir normalt ikke utbedret utenom arbeidstid (man-fredag, kl 08-15:30). Hver 3. tirsdag i måneden er det vedlikeholdskveld. I forbindelse med vedlikehold kan datahotellet være nede i kortere perioder på inntil et par timer på ettermiddag/kveld.</p>
+
+<h3>Kontakt</h3>
+<p>For spørsmål, kontakt Digdir på <a href="mailto:opnedata@digdir.no">opnedata@digdir.no</a>.</p>
+<p>Gjelder spørsmålet innhold i data, bør du kontakte datautgiver direkte.</p>
+</div></div></div>  </div>
+
+  
+  
+</div>
+  </div>
+			</section>
+		</div>
+
+				<!-- Right column -->
+		<div class="threecol last last sidebar">
+
+      
+			
+					</div><!-- /.threecol last -->
+		
+	</div><!-- /.row -->
+
+</div><!-- /.container main -->
+
+
+<div class="container footer">
+	<footer class="row">
+		<address class="twelvecol">
+  	  <ul>
+  	          	<li>Kontakt: <a href="mailto:opnedata@digdir.no">opnedata@digdir.no</a></li>
+      	      	<li>Telefon: +47 22 45 10 00</li>
+      	<li>E-post: <a href="mailto:postmottak@digdir.no">postmottak@digdir.no</a></li>
+      	<li  class="last">Org.nr: 991 825 827</li>
+      	      	      	      </ul>
+		</address>
+			</footer>
+</div>  
+  <script src="themes/contrib/difi2/js/plugins.js"></script>
+  <script src="themes/contrib/difi2/js/script.js?1"></script>
+  <script src="themes/contrib/difi2/js/jquery.pseudo.js"></script>
+  <script src="themes/contrib/difi2/js/search.js"></script>
+</body>
+</html>

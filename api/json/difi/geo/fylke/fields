@@ -1,0 +1,1 @@
+[{"name":"Fylkesnummer","shortName":"nummer","groupable":true,"searchable":false,"indexPrimaryKey":false,"description":"...","definition":"fylkenr"},{"name":"Fylkesnavn","shortName":"navn","groupable":false,"searchable":true,"indexPrimaryKey":false,"description":"...","definition":"navn"}]

@@ -1,0 +1,470 @@
+@charset "UTF-8";
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.okt.2014, 15:37:11
+    Author     : sigrid.bygdas
+*/
+@-webkit-viewport {
+  width: device-width; }
+@-moz-viewport {
+  width: device-width; }
+@-ms-viewport {
+  width: device-width; }
+@-o-viewport {
+  width: device-width; }
+@viewport {
+  width: device-width; }
+@font-face {
+  font-family: 'difi-ikoner';
+  src: url("../fonts/difi-ikoner.eot@-mjy9c7");
+  src: url("../fonts/difi-ikoner.eot@") format("embedded-opentype"), url("../fonts/difi-ikoner.woff@-mjy9c7") format("woff"), url("../fonts/difi-ikoner.ttf@-mjy9c7") format("truetype"), url("../fonts/difi-ikoner.svg@-mjy9c7") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'difi-ikoner';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-home:before {
+  content: "\e600"; }
+
+.icon-feed:before {
+  content: "\e601"; }
+
+.icon-arrow:before {
+  content: "\e602"; }
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.okt.2014, 08:59:00
+    Author     : sigrid.bygdas
+*/
+/* Colors for new design */
+/* Style changes to meet new design of page header */
+html {
+  background-color: transparent; }
+
+body {
+  background-color: #e6e7e0; }
+
+.container.header {
+  background-color: transparent;
+  border-top: none; }
+  .container.header .row {
+    padding-top: 15px;
+    padding-bottom: 15px; }
+.container.main {
+  background-color: transparent;
+  background-image: none; }
+.container.footer, .container.top {
+  background-color: transparent; }
+.container.top .row {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF; }
+.container.menu {
+  background-color: transparent;
+  border-top: none; }
+  .container.menu .row.bgLayoutFix .dummy {
+    height: 0; }
+
+.row.whitespace {
+  display: none; }
+
+/* Fix for sites with another row background color than white, like data.norge.no */
+.main .row.submenues {
+  border-left-color: white;
+  border-right-color: white;
+  padding-bottom: 4px; }
+  @media (max-width: 767px) {
+    .main .row.submenues {
+      border-left-color: transparent;
+      border-right-color: transparent; } }
+
+.breadcrumbs {
+  padding-top: 16px; }
+  @media (max-width: 767px) {
+    .breadcrumbs {
+      padding-top: 0; } }
+
+/* End of fix */
+header .tools {
+	width: 100%;
+	position: relative;
+	margin-top: 40px;
+	margin-right: 0;
+	padding-left: 15px;
+	float: left;
+	box-sizing: border-box;
+}
+
+header .tools #tools_size, header .tools .rss-icon {
+    display: none; }
+  @media (max-width: 991px) {
+    header .tools {
+      padding: 0 20px; } }
+  @media (max-width: 767px) {
+    header .tools {
+      padding: 0;
+      margin-top: 0;
+      float: right; } }
+header.row {
+  background-image: none;
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+  position: relative;
+  max-width: 1230px;
+  border-left: 25px solid #FFFFFF;
+  border-right: 25px solid #FFFFFF;
+  margin-top: 0px;
+  padding-top: 15px;
+  display: block;
+}
+
+header .row:before, header .row:after {
+	content: " ";
+	display: table;	
+}
+
+  @media (max-width: 991px) {
+    header.row {
+      border-left: 20px solid #FFFFFF;
+      border-right: 20px solid #FFFFFF; } }
+  header.row #logo {
+    background-repeat: no-repeat;
+    background-position: center left;
+    height: 61px;
+    width: 119px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease; }
+    header.row #logo:hover, header.row #logo:focus {
+      opacity: 0.25; }
+    @media (max-width: 767px) {
+      header.row #logo.search-open {
+        margin-top: 86px; } }
+    @media (max-width: 479px) {
+      header.row #logo {
+        height: 56px; } }
+header .minimenu {
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  margin-right: 10px;
+  right: 0;
+  top: 20px;
+  font-size: 12px;
+}
+  header .minimenu ul li:after {
+    content: "I";
+    color: dimgray;
+    padding-left: 10px;
+    padding-right: 10px; }
+  header .minimenu ul li a {
+    font-size: 12px; }
+    header .minimenu ul li a:hover, header .minimenu ul li a:focus {
+      border-bottom: 1px solid rgba(0, 133, 202, 0.29); }
+  @media (max-width: 991px) {
+    header .minimenu {
+      margin-right: 30px; } }
+  @media (max-width: 767px) {
+    header .minimenu {
+      display: none; } }
+header form {
+  float: right; }
+  header form .form-type-textfield, header form .form-actions {
+    display: inline; }
+  header form .container-inline {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    border: solid 1px #DFF4FF;
+    background-color: #DFF4FF;
+    height: 34px; }
+    header form .container-inline:hover, header form .container-inline:active, header form .container-inline:focus {
+      background-color: #C2D6DE;
+      border: 1px solid #C2D6DE; }
+      header form .container-inline:hover input[type=text], header form .container-inline:active input[type=text], header form .container-inline:focus input[type=text] {
+        background-color: #C2D6DE;
+        border-color: #C2D6DE; }
+    @media (max-width: 767px) {
+      header form .container-inline {
+        border-color: transparent;
+        background-color: transparent; }
+        header form .container-inline:hover, header form .container-inline:active, header form .container-inline:focus {
+          background-color: transparent;
+          border: 1px solid transparent; } }
+  header form input[type='text'] {
+    -webkit-border-top-left-radius: 20px;
+    -moz-border-top-left-radius: 20px;
+    -ms-border-top-left-radius: 20px;
+    -o-border-top-left-radius: 20px;
+    border-top-left-radius: 20px;
+    -webkit-border-bottom-left-radius: 20px;
+    -moz-border-bottom-left-radius: 20px;
+    -ms-border-bottom-left-radius: 20px;
+    -o-border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    background-color: #DFF4FF;
+    border: none;
+    padding: 7px 0px 7px 8px;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 150px;
+    font-size: 16px;
+    text-indent: 1.5%;
+    color: #000000;
+}
+    header form input[type='text']:hover, header form input[type='text']:active, header form input[type='text']:focus {
+      width: 220px;
+      background-color: #C2D6DE; }
+    @media (max-width: 991px) {
+      header form input[type='text']:hover, header form input[type='text']:active, header form input[type='text']:focus {
+        width: 150px; } }
+    @media (max-width: 767px) {
+      header form input[type='text'] {
+        display: none; } }
+  header form ::-webkit-input-placeholder {
+    color: #303132;
+    opacity: 0.84; }
+  header form :-moz-placeholder {
+    /* Firefox 18- */
+    color: #303132;
+    opacity: 0.84; }
+  header form ::-moz-placeholder {
+    /* Firefox 19+ */
+    opacity: 0.84;
+    color: #303132; }
+  header form :-ms-input-placeholder {
+    color: #303132;
+    opacity: 0.84; }
+  header form input[type='submit'] {
+    color: transparent;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
+    width: 32px;
+    height: 32px;
+    background-image: none;
+    background: #303132 url(../img/difi_search.png) center center no-repeat;
+    background-size: 16px 16px;
+    vertical-align: top;
+    margin-top: 1px;
+    margin-right: 2px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+    @media (max-width: 767px) {
+      header form input[type='submit'] {
+        display: none; } }
+  header form .dmySearchBtn {
+    display: none;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    border-radius: 18px;
+    width: 32px;
+    height: 32px;
+    background: #303132 url(../img/difi_search.png) center center no-repeat;
+    background-size: 16px 16px;
+    vertical-align: top;
+    margin-top: 1px;
+    margin-right: 2px;
+    position: absolute;
+    top: 25px;
+    right: 0px;
+    border: none; }
+    header form .dmySearchBtn.active {
+      opacity: 0.5; }
+    @media (max-width: 767px) {
+      header form .dmySearchBtn {
+        display: block;
+        top: 45px; } }
+    @media (max-width: 479px) {
+      header form .dmySearchBtn {
+        top: 25px; } }
+  @media (max-width: 767px) {
+    header form.search-open {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #303132;
+      width: 100%;
+      height: 86px; }
+      header form.search-open input[type='text'] {
+        display: block;
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        width: 75%;
+        font-size: 16px;
+        padding: 10px 12px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        border-radius: 20px; }
+        header form.search-open input[type='text']:hover, header form.search-open input[type='text']:active, header form.search-open input[type='text']:focus {
+          width: 75%;
+          background-color: #C2D6DE; }
+      header form.search-open input[type='submit'] {
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 20px;
+        background-image: none;
+        color: white;
+        font-size: 16px;
+        width: auto;
+        height: auto;
+        padding: 10px 12px;
+        content: "Søk";
+        border: 1px solid rgba(255, 255, 255, 0.49);
+        border-radius: 30px;
+        text-transform: capitalize; }
+      header form.search-open .dmySearchBtn {
+        top: 100px;
+        right: 20px; } }
+  @media (max-width: 479px) {
+    header form.search-open input[type='text'] {
+      width: 65%; }
+      header form.search-open input[type='text']:hover, header form.search-open input[type='text']:active, header form.search-open input[type='text']:focus {
+        width: 65%; }
+    header form.search-open input[type='submit'] {
+      right: 14px; } }
+header .group {
+    font-size: 20px;
+    display: inline-block;
+    /*padding-left: 5px;*/
+	padding-right: 5px;
+	padding-top: 0px;
+	float: left;
+	position: relative;
+	-webkit-font-smoothing: initial;
+	-moz-osx-font-smoothing: auto;
+	-webkit-transition: margin-top 0.2s ease;
+	-moz-transition: margin-top 0.2s ease;
+	-ms-transition: margin-top 0.2s ease;
+    -o-transition: margin-top 0.2s ease;
+    line-height: 1.42857;
+    width: 66%;
+}
+  @media (max-width: 767px) {
+    header .group.search-open {
+      margin-top: 86px; } }
+  @media (max-width: 479px) {
+    header .group {
+      width: 100%;
+      margin-top: 0;
+      padding-left: 0px;
+      margin-left: 0;
+      /* border-top: 1px solid #8c8c8c; */ }
+      header .group.search-open {
+        margin-top: 0; } }
+
+header .group .sub-portal {
+	padding-top: 8px;
+	/*padding-left: 10px;*/
+	box-sizing: border-box;
+	float: left;
+}
+
+header .group .sub-portal a {
+    font-size: 1.2em;
+    font-weight: 400;
+    font-family: NunitoSans-Regular, Open Sans, sans-serif;
+    color: #000000;
+    -webkit-transition: opacity 0.2s ease;
+    -moz-transition: opacity 0.2s ease;
+    -ms-transition: opacity 0.2s ease;
+    -o-transition: opacity 0.2s ease;
+}
+
+header .group a:hover, header .group a:focus {
+    border: none;
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+header .group .sub-portal p {
+    font-weight: 400;
+    font-size: 0.75em; 
+    width: 180px;
+    line-height: 1.05em;
+    font-family: NunitoSans-Regular, Open Sans, sans-serif;
+    color: #333333;
+}
+
+header .group .logo {
+	padding-top: 12px;
+	float: left;
+	box-sizing: border-box;
+  display: none;
+}
+
+header #tools {
+	float: right;
+	box-sizing: border-box;
+	min-height: 1px;
+	padding-left: 15px;
+	/* position: relative; */
+	width: 32%;
+}
+
+/* Webfonts */
+@font-face {
+  font-family: 'NunitoSans-Bold';
+  src: url('../fonts/NunitoSans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'NunitoSans-Regular';
+    src: url('../fonts/NunitoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'NunitoSans-Medium';
+  src: url('../fonts/NunitoSans-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NunitoSans-Light';
+  src: url('../fonts/NunitoSans-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* NOTE, oct 2014: changes to styles in felleselementer etc are added here */

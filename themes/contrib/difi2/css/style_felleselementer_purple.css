@@ -1,0 +1,129 @@
+/* ---- Color -------------------------------
+Standard Gray	#eaeaea
+Light Gray		#f6f6f6
+Turquoise		#c3dfe0
+Light turquoise	#e7f3f5
+Purple			#6c207e #eadfee
+Pink			#b9426d	#e09db1
+Orange			#ed7b22	#fcbb88
+Link blue		#005581 #0085ca
+Button blue		#226c92
+Difi green		#50b948
+Text black		#222
+Dark pink		#cf447a
+Light pink		#fbeff3
+(Selection pink fe57a1 - not in use)
+*/
+
+header .group h1 {
+	color: #6c207e;	
+}
+
+header .group h1 a:visited {
+	color: #6c207e;	
+}
+
+.menu {
+	background-color: #eadfee;
+}
+
+.menu .row.bgLayoutFix {
+  background-color: #eadfee;
+  border-left: 70px solid #eadfee;
+  border-right: 70px solid #eadfee; 
+}
+
+/*
+.menuWrapper ul.level0 > li > a:hover, .menuWrapper ul.level0 > li > a:active, .menuWrapper ul.level0 > li > a:focus {
+  border-bottom: 4px solid #6c207e; 
+}
+
+.menuWrapper ul.level0 > li.has-focus > a {
+  border-bottom: 4px solid #6c207e; 
+}
+
+.menuWrapper ul.level0 > li.active > a {
+  border-bottom: 4px solid #6c207e; 
+}
+*/
+
+.menuWrapper.mobile .level1.open li.first > a,
+.menuWrapper.mobile .level2.open li.first > a,
+.menuWrapper.mobile .level3.open li.first > a,
+.menuWrapper.mobile .level4.open li.first > a {
+  border-top: 1px solid #6c207e;
+}
+
+.menuWrapper.mobile .level0 li.active > a,
+.menuWrapper.mobile .level0 li.has-focus > a {
+  color: #6c207e;
+}
+
+.toggler a.menuBtn {
+	background-color: #eadfee;
+	border: 1px solid #6c207e;
+}
+
+nav.row {
+	background-color: #eadfee;
+	border-left: 70px solid #eadfee;
+	border-right: 70px solid #eadfee;
+}
+
+nav ul li {
+	border: 2px solid #6c207e;
+}
+
+nav ul li a:hover {
+	color: #6c207e;
+}
+
+nav ul li.open > a,
+nav ul li.open > a:visited {
+	color: #6c207e;
+}
+
+.menu.open nav ul li.open {
+    border-bottom: 5px solid #6c207e;
+}
+
+.submenu, .navigationmenu {
+    border-color: #6c207e !important;
+}
+
+.chaptermenu.felles div.content ul li {
+	border-color: #6c207e !important;
+}
+
+.chaptermenu.felles div.content ul li {
+	border-color: #6c207e !important;
+}
+
+.chaptermenu.felles div.content ul li:hover {
+	background-color: #eadfee !important; 
+}
+
+.button, input[type=submit] {
+	background-color: #6c207e;  /* fallback/image non-cover color */
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eadfee), to(#6c207e)); /* Safari 4+, Chrome 1-9 */
+	background-image: -webkit-linear-gradient(top, #eadfee 5%, #6c207e 65%); /* Safari 5.1+, Mobile Safari, Chrome 10+ */
+	background-image:    -moz-linear-gradient(top, #eadfee 5%, #6c207e 65%); /* Firefox 3.6+ */
+	background-image:     -ms-linear-gradient(top, #eadfee 5%, #6c207e 65%); /* IE 10+ */
+	background-image:      -o-linear-gradient(top, #eadfee 5%, #6c207e 65%); /* Opera 11.10+ */
+	background-image:         linear-gradient(top, #eadfee 5%, #6c207e 65%); */
+}
+
+.button:hover {
+	-moz-box-shadow:    inset 0 0 10px #6c207e;
+	-webkit-box-shadow: inset 0 0 10px #6c207e;
+	box-shadow:         inset 0 0 10px #6c207e;
+}
+
+@media only screen and (max-width: 1023px) {
+  
+  nav.row {
+  border-left: 20px solid #eadfee !important;  /* 20121108-fix */
+  border-right: 20px solid #eadfee !important;  /* 20121108-fix */
+  }
+
+}
