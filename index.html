@@ -3,7 +3,7 @@
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="nb"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="nb"> <!--<![endif]-->
 <head>
-  <title>Digitaliseringsdirektoratet | Datahotell - Difi</title>
+  <title>Digitaliseringsdirektoratet | Datahotell</title>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -69,7 +69,29 @@ var uri_datahotel_api = "//hotell.difi.no/api";
 <script type="text/javascript" src="modules/contrib/google_analytics/googleanalytics.js?rbo0zy"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
-(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-12685001-11", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");
+(function(i,s,o,g,r,a,m){
+    i["GoogleAnalyticsObject"]=r;
+    i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)
+    },i[r].l=1*new Date();
+    a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];
+    a.async=1;
+    a.src=g;
+    m.parentNode.insertBefore(a,m)
+})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
+
+// Check if the URL has the 'dataset' parameter
+var urlParams = new URLSearchParams(window.location.search);
+if (urlParams.has('dataset')) {
+    // Update the page title
+    document.title =  urlParams.get('dataset') + " @ " + document.title;
+}
+
+ga("create", "UA-12685001-11", {"cookieDomain":"auto"});
+ga("set", "anonymizeIp", true);
+ga('set', 'title', document.title); // Send the updated page title to Google Analytics
+ga("send", "pageview");
 //--><!]]>
 </script>
 <script type="text/javascript">
