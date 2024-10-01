@@ -185,7 +185,7 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie"
             <div class="field-item even">
 
                 <p><b>Hva skjer?</b><br/>
-                Datahotellet avvikles 1. oktober 2024. Etter dette må data som i dag er på Datahotellet hentes fra andre kilder. Noen data er allerede tilgjengelige på andre steder (se oversikt under), mens resten av dataene vil bli gjort tilgjengelig fra alternative distribusjoner de neste månedene i samarbeid med datautgiverne.
+                Datahotellet avvikles fra 1. oktober 2024. Etter dette må data som i dag er på Datahotellet hentes fra andre kilder. De fleste data er allerede tilgjengelige på andre steder (se oversikt under), mens resten av dataene blir straks tilgjengelige fra alternative distribusjoner i samarbeid med datautgiverne.
                 </p>
 
                 <p><b>Hvorfor avvikler vi Datahotellet?</b><br/>
@@ -193,12 +193,22 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie"
                 </p>
                     
                 <p><b>Hva må jeg gjøre?</b><br/>
-                Dersom du har integrasjoner mot datasett på Datahotellet, må du oppdatere disse til å peke mot alternativ distribusjon av datasettet innen 1. oktober.<br/>
+                Dersom du har integrasjoner mot datasett på Datahotellet, må du oppdatere disse til å peke mot alternativ distribusjon av datasettet straks.<br/>
                 Se liste over alternative kilder under.
                 </p>
 
-                <p><b>Jeg rekker ikke fristen</b><br/>
-                    Rekker du ikke å legge om din integrasjon innen 1. oktober, eller har andre utfordringer, ta <a href="#kontakt">kontakt</a> med oss. Vi vil hjelpe deg så godt vi kan.
+                <p><b>Jeg trenger litt ekstra tid</b><br/>
+                    Om du ikke har lagt om din integrasjon innen 1. oktober, eller har andre utfordringer, ta <a href="#kontakt">kontakt</a> med oss straks. Det er mulig å få forlenger tilgang mens man legger om til å hente data fra alternativ distribusjon.
+                </p>
+
+                <p><b>Gradvis avvikling</b><br/>
+                  Fra 2. oktober starter vi tilgangsstyring. Ved tilgangsstyring er de kun de brukerene som har gjort avtale om forlenget tilgang som kommer frem. Alle andre vil få feilmelding om at de ikke har tilgang (HTTP-statuskode 403).<br/>
+                  <br/>
+
+                  Vi setter opp tilgangsstyring foran Datahotellet for visse datasett, og utvider gradvis til å til slutt omfatte alle datasett. ELMA-datasettene er først ut, deretter følger andre datasett. De siste datasettene til å få tilgangsstyring er datasett der alternativ distribusjon ikke er helt klar pr. 1. oktober. Dette gjelder data fra Landbruksdirektoratet, Teknisk kjøretøyinfo fra Statens vegvesen og data fra Brønnøysundregistrene. Se <a href="https://docs.google.com/spreadsheets/d/10TOnBw_d8OlU3RwytL4jC-wcr7duE1DSnngfl9oNBZY/edit?usp=sharing">reknearket</a> for detaljer om de ulike datasettene og status for alternativ distribusjon.
+                  <br/><br/>
+
+                  Datahotellet blir skrudd av for godt når alle som har fått ekstra tid er ferdige med å legge om.
                 </p>
 
                 <p><b>Oversikt over alternative kilder og status</b><br/>
@@ -221,8 +231,10 @@ jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie"
 
                 <p id="kontakt"><b>Kontakt</b></br>
                     Kontakt oss på <a href="mailto:opnedata@digdir.no">opnedata@digdir.no</a> eller <a href="https://datalandsbyen.norge.no/topic/476/sp%C3%B8rsm%C3%A5l-og-kommentarar-avvikling-av-datahotellet">skriv til oss i Datalandsbyen</a>.
-                    </p>
+                  </p>
 
+                <p><b>Endringslogg</b><br/>
+                  1/10: Oppdatert med informasjon om gradvis avvikling og tilgangsstyring.<br/>
                 </p>
 
             </div>
